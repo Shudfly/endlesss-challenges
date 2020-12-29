@@ -8,7 +8,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+  console.log(`Our app is running on port ${PORT}`);
 });
 
 const prefix = "^";
@@ -58,7 +58,7 @@ client.on("message", (message) => {
       break;
     default:
       send(
-        "**That isn't a command.**\nCurrently, I can only run `^challenge`.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@657424536740036608>"
+        "**That isn't a command.**\nCurrently, I can only run `^challenge`.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)"
       );
   }
 });
