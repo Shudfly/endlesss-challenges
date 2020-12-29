@@ -6,8 +6,8 @@ const client = new Discord.Client();
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
