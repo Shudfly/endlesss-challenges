@@ -34,6 +34,11 @@ client.once("ready", () => {
       console.log(`Activity set to ${presence.activities[0].name}`)
     )
     .catch(console.error);
+  client.channels.cache
+    .get("763870100700004362")
+    .send(
+      "Hello all!  I am back online!\n**Plus, I now have a `^help` command! (sort of)**"
+    );
 });
 
 client.on("message", (message) => {
@@ -55,6 +60,12 @@ client.on("message", (message) => {
   switch (command) {
     case "challenge":
       runCommand("challenge");
+      break;
+    case "about":
+      send("still working on this... sorry!");
+      break;
+    case "help":
+      runCommand("help");
       break;
     default:
       send(
