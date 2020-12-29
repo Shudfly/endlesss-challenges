@@ -27,9 +27,9 @@ for (const file of commandFiles) {
 }
 
 client.once("ready", () => {
-  console.log("EC is online!");
+  console.log("PB & J is online!");
   client.user
-    .setActivity("for ^challenge", { type: "WATCHING" })
+    .setActivity("for ^help", { type: "WATCHING" })
     .then((presence) =>
       console.log(`Activity set to ${presence.activities[0].name}`)
     )
@@ -37,7 +37,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n**wSo uh my mom made me make a \`^channel\` command...**"
+      "Hello all!  I am back online!\n```Update Log:\n - ^about command added.\n - Name temporarily changed.\n - General bug crap fixed\n - Don't forget to try ^help!```"
     );
 });
 
@@ -62,7 +62,7 @@ client.on("message", (message) => {
       runCommand("challenge");
       break;
     case "about":
-      send("still working on this... sorry!");
+      runCommand("about");
       break;
     case "channel":
       send ("***you're in the wrong fucking channel***");

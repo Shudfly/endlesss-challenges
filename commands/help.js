@@ -15,7 +15,7 @@ module.exports = {
       }
   
       const helpEmbed = new Discord.MessageEmbed()
-        .setTitle("Endlesss Challenges")
+        .setTitle("PB & J")
         .setDescription(
           "*Notice:  I am currently adding all sorts of functionality to this bot, so there may be times when it is offline.*"
         )
