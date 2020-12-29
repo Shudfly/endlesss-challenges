@@ -78,8 +78,7 @@ client.on("message", (message) => {
       break;
     default:
       send(
-        "**That isn't a command.**\nTry \`^help\`!.\n\n*While I've got you here though, maybe you can make a few suggestions?*\n
-        DM me here: <@!657424536740036608> (spoopy turtle#5286)\nIf that doesn't work, DM Firephly, ig"
+        "**That isn't a command.**\nTry \`^help\`!.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)\nIf that doesn't work, DM Firephly, ig"
       );
   }
 });
