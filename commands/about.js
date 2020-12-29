@@ -27,10 +27,12 @@ module.exports = {
           value: "Shudfly (aka spoopy turtle)",
           inline: true,
         },
-        { name: "Version:", value: "1.3", inline: true },
+        { name: "Version:", value: "1.5", inline: true },
         { name: "Awesomeness Level:", value: "Moderate", inline: true }
       )
-      .setFooter("Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig");
+      .setFooter(
+        "Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig"
+      );
 
     send(`Sent you a little info page, <@!${message.author.id}>!`);
     sendEmbed(aboutEmbed);

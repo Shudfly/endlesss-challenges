@@ -24,6 +24,7 @@ module.exports = {
         { name: "\u200b", value: "^about" },
         { name: "\u200b", value: "^challenge" },
         { name: "\u200b", value: "^channel" },
+        { name: "\u200b", value: "^say" },
         {
           name:
             "To get more information about a command, use `^help <command>` (Now Semi-Functional)",
@@ -70,7 +71,7 @@ module.exports = {
       send(`Sent you info about ^${args[0]}, <@!${message.author.id}>!`);
       switch (args[0]) {
         case "about":
-          send(aboutEmbed);
+          sendEmbed(aboutEmbed);
           break;
         default:
           send(`**\`^${args[0]}\` is not a command!**`);

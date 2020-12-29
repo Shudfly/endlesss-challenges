@@ -16,7 +16,7 @@ const prefix = "^";
 const channelResponses = [
   "oh no, it appears you’re at it again",
   "***you're in the wrong fucking channel***",
-  "I am ***very*** disappointed in you"
+  "I am ***very*** disappointed in you",
 ];
 
 const fs = require("fs");
@@ -43,7 +43,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n```Update Log:\n - ^channel command updated.\n - help command updated (you can now use ^help about).\n - Don't forget to try ^help!```"
+      "Hello all!  I am back online!\n```Update Log:\n - added ^say command.\n - General broken crap fixed.\n - Don't forget to try ^help!```"
     );
 });
 
@@ -71,14 +71,19 @@ client.on("message", (message) => {
       runCommand("about");
       break;
     case "channel":
-      send(channelResponses[Math.floor(Math.random() * channelResponses.length)]);
+      send(
+        channelResponses[Math.floor(Math.random() * channelResponses.length)]
+      );
+      break;
+    case "say":
+      runCommand("say");
       break;
     case "help":
       runCommand("help");
       break;
     default:
       send(
-        "**That isn't a command.**\nTry \`^help\`!.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)\nIf that doesn't work, DM Firephly, ig"
+        "**That isn't a command.**\nTry `^help`!.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)\nIf that doesn't work, DM Firephly, ig"
       );
   }
 });
