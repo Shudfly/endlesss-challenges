@@ -11,11 +11,6 @@ app.listen(port, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.console.log(`Our app is running on port ${PORT}`);
-});
-
 const prefix = "^";
 
 const fs = require("fs");
