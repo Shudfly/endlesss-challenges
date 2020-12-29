@@ -34,7 +34,7 @@ module.exports = {
             value: "\u200b",
           }
         )
-        .setFooter("Suggestions?  DM me at <@!657424536740036608> (spoopy turtle#5286)");
+        .setFooter("Suggestions?  DM me at @spoopy turtle#5286");
   
       const spamEmbed = new Discord.MessageEmbed()
         .setTitle("Pickle")
@@ -61,12 +61,13 @@ module.exports = {
               "The amount of messages to be sent.\n*ANYTHING AFTER THIS NUMBER WILL BE IGNORED*",
           }
         )
-        .setFooter("Suggestions?  DM me at <@!657424536740036608> (spoopy turtle#5286)");
+        .setFooter("Suggestions?  DM me at @spoopy turtle#5286");
   
       if (args.length > 1) {
         send("**Please specify one command only.**");
         return;
       } else if (args.length == 0) {
+        send(`Sent you a little list of commands, <@!${message.author.id}>!`)
         sendEmbed(helpEmbed);
         return;
       }

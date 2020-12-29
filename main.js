@@ -37,7 +37,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n**Plus, I now have a `^help` command! (sort of)**"
+      "Hello all!  I am back online!\n**whoops forgot to update the incorrect command thingie**"
     );
 });
 
@@ -69,7 +69,7 @@ client.on("message", (message) => {
       break;
     default:
       send(
-        "**That isn't a command.**\nCurrently, I can only run `^challenge`.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)"
+        "**That isn't a command.**\nTry '^help'!.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)"
       );
   }
 });
