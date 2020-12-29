@@ -1,8 +1,20 @@
 const Discord = require("discord.js");
 
+const express = require("express");
+
 const client = new Discord.Client();
 
-const PORT = process.env.PORT || 18306;
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.console.log(`Our app is running on port ${PORT}`);
+});
 
 const prefix = "^";
 
