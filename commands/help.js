@@ -23,6 +23,7 @@ module.exports = {
         .addFields(
           { name: "\u200b", value: "^about" },
           { name: "\u200b", value: "^challenge" },
+          { name: "\u200b", value: "^channel" },
           {
             name:
               "To get more information about a command, use `^help <command>` (Not Yet Available)",

@@ -37,7 +37,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n**whoops forgot to update the incorrect command thingie**"
+      "Hello all!  I am back online!\n**wSo uh my mom made me make a \`^channel\` command...**"
     );
 });
 
@@ -64,12 +64,15 @@ client.on("message", (message) => {
     case "about":
       send("still working on this... sorry!");
       break;
+    case "channel":
+      send ("***you're in the wrong fucking channel***");
+      break;
     case "help":
       runCommand("help");
       break;
     default:
       send(
-        "**That isn't a command.**\nTry '^help'!.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)"
+        "**That isn't a command.**\nTry \`^help\`!.\n\n*While I've got you here though, maybe you can make a few suggestions?*\nDM me here: <@!657424536740036608> (spoopy turtle#5286)"
       );
   }
 });
