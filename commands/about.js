@@ -15,9 +15,9 @@ module.exports = {
     }
 
     const aboutEmbed = new Discord.MessageEmbed()
-      .setTitle("PB & J")
+      .setTitle("Endlesss Challenges")
       .setDescription(
-        "*Notice:  I am currently adding all sorts of functionality to this bot, so there may be times when it is offline.*"
+        "*Notice:  I am currently adding all sorts of functionality to this bot,\nso there may be times when it is offline.*"
       )
       .setColor("#9900ff")
       .addFields(
@@ -27,7 +27,7 @@ module.exports = {
           value: "Shudfly (aka spoopy turtle)",
           inline: true,
         },
-        { name: "Version:", value: "1.5", inline: true },
+        { name: "Version:", value: "1.6", inline: true },
         { name: "Awesomeness Level:", value: "Moderate", inline: true }
       )
       .setFooter(

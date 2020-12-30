@@ -15,9 +15,9 @@ module.exports = {
     }
 
     const helpEmbed = new Discord.MessageEmbed()
-      .setTitle("PB & J")
+      .setTitle("Endlesss Challenges")
       .setDescription(
-        "*Notice:  I am currently adding all sorts of functionality to this bot, so there may be times when it is offline.*"
+        "*Notice:  I am currently adding all sorts of functionality to this bot,\nso there may be times when it is offline.*"
       )
       .setColor("#9900ff")
       .addFields(
@@ -27,7 +27,7 @@ module.exports = {
         { name: "\u200b", value: "^say" },
         {
           name:
-            "To get more information about a command, use `^help <command>` (Now Semi-Functional)",
+            "To get more information about a command, use `^help <command>` (Now Functional!)",
           value: "*Example: `^help about`*\n*Command **must** be lowercase*",
         },
         { name: "\u200b", value: "\u200b" },
@@ -42,13 +42,18 @@ module.exports = {
       );
 
     const aboutEmbed = new Discord.MessageEmbed()
-      .setTitle("PB & J")
+      .setTitle("Endlesss Challenges")
       .setDescription(
-        "*Notice:  I am currently adding all sorts of functionality to this bot, so there may be times when it is offline.*"
+        "*Notice:  I am currently adding all sorts of functionality to this bot,\nso there may be times when it is offline.*"
       )
-      .setColor("#99ff00")
+      .setColor("#9900ff")
       .addFields(
-        { name: "Command:", value: "^about" },
+        { name: "Command:", value: "^about", inline: true },
+        {
+          name: "Purpose:",
+          value: "Provides info about the bot",
+          inline: true,
+        },
         {
           name: "Anyone can use this command.",
           value: "\u200b",
@@ -64,14 +69,99 @@ module.exports = {
         "Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig"
       );
 
+    const challengeEmbed = new Discord.MessageEmbed()
+      .setTitle("Endlesss Challenges")
+      .setDescription(
+        "*Notice:  I am currently adding all sorts of functionality to this bot,\nso there may be times when it is offline.*"
+      )
+      .setColor("#9900ff")
+      .addFields(
+        { name: "Command:", value: "^challenge", inline: true },
+        {
+          name: "Purpose:",
+          value: "Provides a challenge for the user to complete in a jam.",
+          inline: true,
+        },
+        {
+          name: "Anyone can use this command.",
+          value: "\u200b",
+        },
+        { name: "^challenge", value: "The command itself", inline: true },
+        {
+          name: "<none>",
+          value: "There are no other arguments required.",
+          inline: true,
+        }
+      )
+      .setFooter(
+        "Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig"
+      );
+
+    const channelEmbed = new Discord.MessageEmbed()
+      .setTitle("Endlesss Challenges")
+      .setDescription(
+        "*Notice:  I am currently adding all sorts of functionality to this bot,\nso there may be times when it is offline.*"
+      )
+      .setColor("#9900ff")
+      .addFields(
+        { name: "Command:", value: "^channel", inline: true },
+        { name: "Purpose:", value: "Uh...", inline: true },
+        {
+          name: "Anyone can use this command.",
+          value: "\u200b",
+        },
+        { name: "^challenge", value: "The command itself", inline: true },
+        {
+          name: "<none>",
+          value: "There are no other arguments required.",
+          inline: true,
+        }
+      )
+      .setFooter(
+        "Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig"
+      );
+
+    const sayEmbed = new Discord.MessageEmbed()
+      .setTitle("Endlesss Challenges")
+      .setDescription(
+        "*Notice:  I am currently adding all sorts of functionality to this bot, \no there may be times when it is offline.*"
+      )
+      .setColor("#9900ff")
+      .addFields(
+        { name: "Command:", value: "^say", inline: true },
+        { name: "Purpose:", value: "Repeats the given input.", inline: true },
+        {
+          name: "Anyone can use this command.",
+          value: "\u200b",
+        },
+        { name: "^say", value: "The command itself", inline: true },
+        {
+          name: "<anything>",
+          value: "The bot will repeat this.",
+          inline: true,
+        }
+      )
+      .setFooter(
+        "Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig"
+      );
+
     if (args.length > 1) {
       send("**Please specify one command only.**");
       return;
     } else if (args.length == 1) {
-      send(`Sent you info about ^${args[0]}, <@!${message.author.id}>!`);
+      send(`Sent you info about \`^${args[0]}\`, <@!${message.author.id}>!`);
       switch (args[0]) {
         case "about":
           sendEmbed(aboutEmbed);
+          break;
+        case "challenge":
+          sendEmbed(challengeEmbed);
+          break;
+        case "channel":
+          sendEmbed(channelEmbed);
+          break;
+        case "say":
+          sendEmbed(sayEmbed);
           break;
         default:
           send(`**\`^${args[0]}\` is not a command!**`);

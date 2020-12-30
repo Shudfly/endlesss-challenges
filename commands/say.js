@@ -8,7 +8,7 @@ module.exports = {
       message.channel.send(text);
     }
 
-    if ((args.length == 0)) {
+    if (args.length == 0) {
       send("I can't just say nothing!");
     } else {
       for (i = 0; i < args.length; i++) {

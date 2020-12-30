@@ -33,7 +33,7 @@ for (const file of commandFiles) {
 }
 
 client.once("ready", () => {
-  console.log("PB & J is online!");
+  console.log("EC is online!");
   client.user
     .setActivity("for ^help", { type: "WATCHING" })
     .then((presence) =>
@@ -43,7 +43,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n```Notice:\nI have no idea why the bot went to sleep... trying to figure that out.```"
+      "Hello all!  I am back online!\n```Update Log:\n - The name was dumb, so I changed it back.\n - Updated the ^help command.\n - General cleanup :)\n - Don't forget to use ^help!```"
     );
 });
 
