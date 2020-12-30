@@ -11,7 +11,7 @@ app.listen(PORT, () => {
   console.log(`Our app is running on port ${PORT}`);
 });
 
-const prefix = "^";
+var prefix = "^";
 
 const channelResponses = [
   "oh no, it appears you’re at it again",
@@ -35,7 +35,7 @@ for (const file of commandFiles) {
 client.once("ready", () => {
   console.log("EC is online!");
   client.user
-    .setActivity("for ^help", { type: "WATCHING" })
+    .setActivity(`for ${prefix}help`, { type: "WATCHING" })
     .then((presence) =>
       console.log(`Activity set to ${presence.activities[0].name}`)
     )
@@ -43,7 +43,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n```Update Log:\n - Fixed some typos involving the ^help command.\n - Updated the bot name on the info page.\n - Updated the ^say command.\n - General cleanup :)\n - Don't forget to use ^help!```"
+      "Hello all!  I am back online!\n```Update Log:\n - Added a (hopefully) functional ^prefix command.\n - General cleanup :)\n - Don't forget to use ^help!```"
     );
 });
 
@@ -60,7 +60,13 @@ client.on("message", (message) => {
   const command = args.shift().toLowerCase();
 
   function runCommand(command) {
-    client.commands.get(command).execute(message, args);
+    switch (command) {
+      case "prefix":
+        client.commands.get(command).execute(message, args, client, prefix);
+        break;
+      default:
+        client.commands.get(command).execute(message, args);
+    }
   }
 
   switch (command) {
@@ -80,6 +86,9 @@ client.on("message", (message) => {
       break;
     case "help":
       runCommand("help");
+      break;
+    case "prefix":
+      runCommand("prefix");
       break;
     default:
       send(
