@@ -43,7 +43,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n```Update Log:\n - ^say command is now (hopefully) not broken.\n - Don't forget to try ^help!```"
+      "Hello all!  I am back online!\n```Notice:\nI have no idea why the bot went to sleep... trying to figure that out.```"
     );
 });
 
