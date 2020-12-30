@@ -11,7 +11,7 @@ app.listen(PORT, () => {
   console.log(`Our app is running on port ${PORT}`);
 });
 
-var prefix = "^";
+const prefix = "^";
 
 const channelResponses = [
   "oh no, it appears you’re at it again",
@@ -41,9 +41,9 @@ client.once("ready", () => {
     )
     .catch(console.error);
   client.channels.cache
-    .get("763870100700004362")
+    .get("793669949960486922")
     .send(
-      "***-=ONLINE=-***\nPLEASE DO NOT USE THE PREFIX COMMAND, IT WILL CRASH THE BOT."
+      "***-=BACK ONLINE=-***\nPrefix command removed because it crashes the bot."
     );
 });
 
@@ -60,13 +60,7 @@ client.on("message", (message) => {
   const command = args.shift().toLowerCase();
 
   function runCommand(command) {
-    switch (command) {
-      case "prefix":
-        client.commands.get(command).execute(message, args, client, prefix);
-        break;
-      default:
-        client.commands.get(command).execute(message, args);
-    }
+    client.commands.get(command).execute(message, args);
   }
 
   switch (command) {
@@ -86,11 +80,6 @@ client.on("message", (message) => {
       break;
     case "help":
       runCommand("help");
-      break;
-    case "prefix":
-      runCommand("prefix");
-      const np = require('./commands/prefix');
-      prefix = prefix.np;
       break;
     default:
       send(

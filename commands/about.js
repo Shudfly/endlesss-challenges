@@ -27,7 +27,7 @@ module.exports = {
           value: "Shudfly (aka spoopy turtle)",
           inline: true,
         },
-        { name: "Version:", value: "1.8.1", inline: true },
+        { name: "Version:", value: "1.9", inline: true },
         { name: "Awesomeness Level:", value: "Moderate", inline: true }
       )
       .setFooter(

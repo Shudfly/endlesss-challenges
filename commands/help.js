@@ -145,35 +145,6 @@ module.exports = {
         "Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig"
       );
 
-    const prefixEmbed = new Discord.MessageEmbed()
-      .setTitle("Endlesss Challenges")
-      .setDescription(
-        "*Notice:  I am currently adding all sorts of functionality to this bot,\nso there may be times when it is offline.*"
-      )
-      .setColor("#9900ff")
-      .addFields(
-        { name: "Command:", value: "^prefix", inline: true },
-        {
-          name: "Purpose:",
-          value: "Sets the prefix to the given input.",
-          inline: true,
-        },
-        {
-          name:
-            "Only members with the Manage Server permission can use this command.",
-          value: "\u200b",
-        },
-        { name: "^prefix", value: "The command itself", inline: true },
-        {
-          name: "<prefix>",
-          value: "The bot's prefix will be set to this.",
-          inline: true,
-        }
-      )
-      .setFooter(
-        "Suggestions?  DM me at @spoopy turtle#5286\nIf that doesn't work, DM Firephly, ig"
-      );
-
     if (args.length > 1) {
       send("**Please specify one command only.**");
       return;
@@ -191,9 +162,6 @@ module.exports = {
           break;
         case "say":
           sendEmbed(sayEmbed);
-          break;
-        case "prefix":
-          sendEmbed(prefixEmbed);
           break;
         default:
           send(`**\`^${args[0]}\` is not a command!**`);
