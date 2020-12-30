@@ -43,7 +43,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n```Update Log:\n - Added a (hopefully) functional ^prefix command.\n - General cleanup :)\n - Don't forget to use ^help!```"
+      "Hello all!  I am back online!\n```Update Log:\n - The bot isn't broken anymore! (yay)\n - General cleanup :)\n - Don't forget to use ^help!```"
     );
 });
 
