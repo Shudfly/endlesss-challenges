@@ -9,7 +9,7 @@ module.exports = {
     if (args.length == 0) {
       send(`The current prefix is **${prefix}**`);
     } else {
-      if (!message.member.hasPermisson("MANAGE_SERVER")) {
+      if (!message.member.hasPermission("MANAGE_SERVER")) {
         send(
           `**You need the __Manage Server__ permission to perform this command, <@!${message.author.id}>.**`
         );
