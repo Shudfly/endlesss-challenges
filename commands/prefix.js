@@ -18,7 +18,7 @@ module.exports = {
         return;
       }
       newPrefix = args[0];
-      export { prefix };
+      exports.np = newPrefix;
       client.user
         .setActivity(`for ${newPrefix}help`, { type: "WATCHING" })
         .then((presence) =>

@@ -89,8 +89,8 @@ client.on("message", (message) => {
       break;
     case "prefix":
       runCommand("prefix");
-      import { newPrefix } from "./commands/prefix";
-      prefix = newPrefix;
+      const np = require('./commands/prefix');
+      prefix = prefix.np;
       break;
     default:
       send(
