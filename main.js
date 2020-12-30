@@ -43,7 +43,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n```Update Log:\n - WHY IS IT CRASHINGGGGGGG\n - General cleanup :)\n - Don't forget to use ^help!```"
+      "***-=ONLINE=-***\nPLEASE DO NOT USE THE PREFIX COMMAND, IT WILL CRASH THE BOT."
     );
 });
 
