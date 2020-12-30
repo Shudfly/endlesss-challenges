@@ -1,7 +1,7 @@
 module.exports = {
   name: "prefix",
   description: "This command changes the bot prefix.",
-  execute(message, args, client) {
+  execute(message, args, client, prefix) {
     function send(text) {
       message.channel.send(text);
     }
