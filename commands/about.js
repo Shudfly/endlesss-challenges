@@ -21,13 +21,13 @@ module.exports = {
       )
       .setColor("#9900ff")
       .addFields(
-        { name: "Name:", value: "PB & J", inline: true },
+        { name: "Name:", value: "Endless Challenges", inline: true },
         {
           name: "Creator:",
           value: "Shudfly (aka spoopy turtle)",
           inline: true,
         },
-        { name: "Version:", value: "1.6", inline: true },
+        { name: "Version:", value: "1.7", inline: true },
         { name: "Awesomeness Level:", value: "Moderate", inline: true }
       )
       .setFooter(

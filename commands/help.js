@@ -110,7 +110,7 @@ module.exports = {
           name: "Anyone can use this command.",
           value: "\u200b",
         },
-        { name: "^challenge", value: "The command itself", inline: true },
+        { name: "^channel", value: "The command itself", inline: true },
         {
           name: "<none>",
           value: "There are no other arguments required.",
@@ -124,7 +124,7 @@ module.exports = {
     const sayEmbed = new Discord.MessageEmbed()
       .setTitle("Endlesss Challenges")
       .setDescription(
-        "*Notice:  I am currently adding all sorts of functionality to this bot, \no there may be times when it is offline.*"
+        "*Notice:  I am currently adding all sorts of functionality to this bot,\nso there may be times when it is offline.*"
       )
       .setColor("#9900ff")
       .addFields(

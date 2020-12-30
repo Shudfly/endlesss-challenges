@@ -9,7 +9,7 @@ module.exports = {
     }
 
     if (args.length == 0) {
-      send("I can't just say nothing!");
+      send(`I can't just say nothing, <@!${message.author.id}>!`);
     } else {
       for (i = 0; i < args.length; i++) {
         text = `${text} ${args[i]}`;
