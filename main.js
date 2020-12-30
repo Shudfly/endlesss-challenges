@@ -43,7 +43,7 @@ client.once("ready", () => {
   client.channels.cache
     .get("763870100700004362")
     .send(
-      "Hello all!  I am back online!\n```Update Log:\n - The bot isn't broken anymore! (yay)\n - General cleanup :)\n - Don't forget to use ^help!```"
+      "Hello all!  I am back online!\n```Update Log:\n - (Maybe) fixed the ^prefix command.\n - General cleanup :)\n - Don't forget to use ^help!```"
     );
 });
 
@@ -62,7 +62,7 @@ client.on("message", (message) => {
   function runCommand(command) {
     switch (command) {
       case "prefix":
-        client.commands.get(command).execute(message, args, client, prefix);
+        client.commands.get(command).execute(message, args, client);
         break;
       default:
         client.commands.get(command).execute(message, args);
@@ -89,6 +89,8 @@ client.on("message", (message) => {
       break;
     case "prefix":
       runCommand("prefix");
+      import { newPrefix } from "./commands/prefix";
+      prefix = newPrefix;
       break;
     default:
       send(
